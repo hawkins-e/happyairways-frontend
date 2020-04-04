@@ -5,9 +5,13 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import FlightContainer from './FlightContainer'
+
 
 
 function HomePage () {
@@ -21,10 +25,7 @@ function HomePage () {
         <Nav.Link href="#signup">Sign-Up</Nav.Link>
         <Nav.Link href="#login">Log-In</Nav.Link>
       </Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-light">Search</Button>
-      </Form>
+      
     </Navbar>
   
     <br />     
@@ -42,6 +43,61 @@ function HomePage () {
       One-Way
     </ToggleButton>
   </ButtonGroup>
+  <br></br>
+  <br></br>
+  <Row>
+  <Col>Depart  
+    <InputGroup className="mb-3">
+    <FormControl
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
+    />
+     </InputGroup>
+    </Col>
+  <br></br>
+  <Col>Arrive 
+    <InputGroup className="mb-3">
+    <FormControl
+      aria-label="Default"
+      aria-describedby="inputGroup-sizing-default"
+    />
+     </InputGroup>
+    </Col>
+    <Col>Depart Date 
+    <InputGroup className="mb-3">
+    <FormControl
+      aria-label="Default"
+      placeholder="mm/dd/yyyy"
+      aria-describedby="inputGroup-sizing-default"
+    />
+     </InputGroup>
+    </Col>
+    <Col>Return Date 
+    <InputGroup className="mb-3">
+    <FormControl
+      aria-label="Default"
+      placeholder="mm/dd/yyyy"
+      aria-describedby="inputGroup-sizing-default"
+    />
+     </InputGroup>
+     <Button variant="primary" class="float--right"> 
+      Book
+    </Button>
+    </Col>
+    </Row>
+  </Container>
+</Jumbotron>
+
+<Jumbotron fluid>
+  <Container>
+    <h1>Today's Specials</h1>
+    <FlightContainer />
+  </Container>
+</Jumbotron>
+
+<Jumbotron fluid>
+  <Container>
+    <h1>Happy Airways Information</h1>
   </Container>
 </Jumbotron>
 </div> 
