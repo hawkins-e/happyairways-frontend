@@ -25,8 +25,27 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
   </head>
   <body>
+    <script>
+   const pressed = [];
+  const secretCode = 'erica';
+
+  window.addEventListener('keyup', (e) => { 
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length -1, pressed.length - secretCode.length)
+    console.log(pressed);
+
+    if(pressed.join('').includes(secretCode)) {
+         console.log("DING DING!");
+         cornify_add();
+    }
+    console.log(pressed);
+  });
+
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
